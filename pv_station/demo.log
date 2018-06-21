@@ -1,0 +1,38 @@
+2018-05-29 16:02:34.165  INFO 4492 --- [main] run.Application                          : Starting Application on wangzhuang-PC with PID 4492 (C:\dev\project\pv_station\target\classes started by wangzhuang in C:\dev\project\pv_station)
+2018-05-29 16:02:34.213  INFO 4492 --- [main] run.Application                          : No active profile set, falling back to default profiles: default
+2018-05-29 16:02:34.475  INFO 4492 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6e2c9341: startup date [Tue May 29 16:02:34 CST 2018]; root of context hierarchy
+2018-05-29 16:02:35.105  INFO 4492 --- [main] run.Application                          : Started Application in 2.888 seconds (JVM running for 5.954)
+2018-05-29 16:02:35.394  INFO 4492 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@6e2c9341: startup date [Tue May 29 16:02:34 CST 2018]; root of context hierarchy
+2018-05-29 16:04:30.968  INFO 4196 --- [main] run.Application                          : Starting Application on wangzhuang-PC with PID 4196 (C:\dev\project\pv_station\target\classes started by wangzhuang in C:\dev\project\pv_station)
+2018-05-29 16:04:30.973  INFO 4196 --- [main] run.Application                          : No active profile set, falling back to default profiles: default
+2018-05-29 16:04:31.001  INFO 4196 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6e2c9341: startup date [Tue May 29 16:04:30 CST 2018]; root of context hierarchy
+2018-05-29 16:04:31.205  INFO 4196 --- [main] run.Application                          : Started Application in 0.68 seconds (JVM running for 1.201)
+2018-05-29 16:04:31.751  INFO 4196 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@6e2c9341: startup date [Tue May 29 16:04:30 CST 2018]; root of context hierarchy
+2018-05-29 16:07:14.350  INFO 4116 --- [main] run.Application                          : Starting Application on wangzhuang-PC with PID 4116 (C:\dev\project\pv_station\target\classes started by wangzhuang in C:\dev\project\pv_station)
+2018-05-29 16:07:14.355  INFO 4116 --- [main] run.Application                          : No active profile set, falling back to default profiles: default
+2018-05-29 16:07:14.414  INFO 4116 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6e2c9341: startup date [Tue May 29 16:07:14 CST 2018]; root of context hierarchy
+2018-05-29 16:07:14.661  INFO 4116 --- [main] run.Application                          : Started Application in 0.872 seconds (JVM running for 1.428)
+2018-05-29 16:07:15.093  INFO 4116 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@6e2c9341: startup date [Tue May 29 16:07:14 CST 2018]; root of context hierarchy
+2018-05-29 16:11:15.225  INFO 3192 --- [main] run.Application                          : Starting Application on wangzhuang-PC with PID 3192 (C:\dev\project\pv_station\target\classes started by wangzhuang in C:\dev\project\pv_station)
+2018-05-29 16:11:15.229  INFO 3192 --- [main] run.Application                          : No active profile set, falling back to default profiles: default
+2018-05-29 16:11:15.263  INFO 3192 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6e2c9341: startup date [Tue May 29 16:11:15 CST 2018]; root of context hierarchy
+2018-05-29 16:11:15.451  INFO 3192 --- [main] run.Application                          : Started Application in 0.782 seconds (JVM running for 1.336)
+2018-05-29 16:11:15.885  INFO 3192 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@6e2c9341: startup date [Tue May 29 16:11:15 CST 2018]; root of context hierarchy
+2018-05-29 16:13:18.941  INFO 2472 --- [main] run.Application                          : Starting Application on wangzhuang-PC with PID 2472 (C:\dev\project\pv_station\target\classes started by wangzhuang in C:\dev\project\pv_station)
+2018-05-29 16:13:18.945  INFO 2472 --- [main] run.Application                          : No active profile set, falling back to default profiles: default
+2018-05-29 16:13:19.114  INFO 2472 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6e2c9341: startup date [Tue May 29 16:13:19 CST 2018]; root of context hierarchy
+2018-05-29 16:13:20.561  WARN 2472 --- [main] o.h.v.m.ParameterMessageInterpolator     : HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-05-29 16:13:20.708  WARN 2472 --- [main] o.h.v.m.ParameterMessageInterpolator     : HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-05-29 16:13:21.527  INFO 2472 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-29 16:13:21.546  INFO 2472 --- [main] run.Application                          : Started Application in 3.055 seconds (JVM running for 3.603)
+2018-05-29 16:13:21.547  INFO 2472 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@6e2c9341: startup date [Tue May 29 16:13:19 CST 2018]; root of context hierarchy
+2018-05-29 16:13:21.549  INFO 2472 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-29 16:14:28.140  INFO 6952 --- [main] run.Application                          : Starting Application on wangzhuang-PC with PID 6952 (C:\dev\project\pv_station\target\classes started by wangzhuang in C:\dev\project\pv_station)
+2018-05-29 16:14:28.144  INFO 6952 --- [main] run.Application                          : No active profile set, falling back to default profiles: default
+2018-05-29 16:14:28.251  INFO 6952 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6e2c9341: startup date [Tue May 29 16:14:28 CST 2018]; root of context hierarchy
+2018-05-29 16:14:29.224  WARN 6952 --- [main] o.h.v.m.ParameterMessageInterpolator     : HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-05-29 16:14:29.473  WARN 6952 --- [main] o.h.v.m.ParameterMessageInterpolator     : HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-05-29 16:14:29.994  INFO 6952 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-29 16:14:30.014  INFO 6952 --- [main] run.Application                          : Started Application in 2.32 seconds (JVM running for 2.867)
+2018-05-29 16:14:30.016  INFO 6952 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@6e2c9341: startup date [Tue May 29 16:14:28 CST 2018]; root of context hierarchy
+2018-05-29 16:14:30.018  INFO 6952 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown

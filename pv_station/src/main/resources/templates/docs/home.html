@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{../dist/amazeui.min.css}"/>
+    <link rel="stylesheet" th:href="@{../demo.css}"/>
+    <script src="../dist/jquery.min.js"></script>
+    <script src="../dist/amazeui.min.js"></script>
+    <script src="../dist/echarts.min.js"></script>
+    <script src="../dist/t3.min.js"></script>
+    <script src="../demo.min.js"></script>
+    <style type="text/css">
+        .nav{
+            width: 100%;height: 18%;padding: 13px 0;border: #666666 solid 1px;border-bottom: 0px;border-right:0px;color: whitesmoke;
+        }
+        .nav p{
+            text-align:center;line-height:0px;
+        }
+        .nav span{
+            text-align:center;display:block;
+        }
+        .nav:hover{
+            background-color: #095f8a;
+            border-left: #36AF47 3px solid;
+            color: #209e20;
+            cursor: pointer;
+        }
+        .nav_active{
+            background-color: #095f8a;
+            border-left: #209e20 3px solid;
+            color: #36AF47;
+            cursor: pointer;
+        }
+    </style>
+    <script type="text/javascript">
+
+    </script>
+</head>
+<body>
+<!-- 链接触发器， href 属性为目标元素 ID -->
+<a href="#doc-oc-demo1" data-am-offcanvas="">点击显示侧边栏</a>
+<div id="doc-oc-demo1" class="am-offcanvas am-active" style="background: white">
+    <!-- 侧边栏内容 -->
+    <div class="am-offcanvas-bar am-offcanvas-bar-overlay am-offcanvas-bar-active" style="background: #0c7cb5;width: 200px;box-shadow:  3px 0px 5px #B5B5B5;">
+        <div>
+            <div style="margin: 0 auto;width: 40%;position: relative;height: 0;padding-bottom: 40%;margin-top: 8px">
+                <img src="../img/header.png" style="border: #666666 solid 1px; border-radius: 50%;position:  absolute;top: 0;left: 0;width: 100%;height: 100%;"/>
+            </div>
+            <div>
+                <span style="display: block;text-align:center;color: whitesmoke">Mr.Wang</span>
+                <button type="button" class="am-btn am-btn-default am-round" style="background-color: transparent;display: block;margin: 0 auto;color: whitesmoke;padding: .2em 1em;margin-top: 4px;">默认样式</button>
+            </div>
+        </div>
+        <a href="/">
+            <div class="nav nav_active" style="position: absolute;bottom: 36%;">
+                <span class="am-icon-home am-icon-lg"></span>
+                <p>HOME</p>
+            </div>
+        </a>
+        <a href="/pv/data">
+            <div class="nav" style="position: absolute;bottom: 18%;">
+                <span class="am-icon-bar-chart am-icon-lg"></span>
+                <p>DASHBOARD</p>
+            </div>
+        </a>
+        <a href="/pv/interAction">
+        <div class="nav" style="position: absolute;bottom: 0;">
+            <span class="am-icon-random am-icon-lg"></span>
+            <p>INTERACTION</p>
+        </div>
+        </a>
+    </div>
+    <div style="float: left;height: 53px;margin-left: 200px;position: fixed;left: 0;right: 0;">
+        <img src="../img/atos-logo-menu-bar.png" width="170px" height="44px" style="margin-top: 8px;padding-left: 3%"/>
+        <span class="am-icon-gear am-icon-lg" style="text-align:center;display:block;float: right;"></span>
+    </div>
+    <div style="float: left;height: 600px;margin-left: 200px;background-color: #ECEFF4;position: fixed;bottom: 0;top: 53px;left: 0;right: 0;overflow: auto">
+        <img src="../img/home_header.png" width="100%" height="26%"/>
+        <img src="../img/home_body.png" width="100%" height="74%"/>
+    </div>
+</div>
+</body>
+</html>

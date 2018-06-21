@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{../dist/amazeui.min.css}"/>
+    <link rel="stylesheet" th:href="@{../demo.css}"/>
+    <script src="../dist/jquery.min.js"></script>
+    <script src="../dist/amazeui.min.js"></script>
+    <script src="../dist/echarts.min.js"></script>
+    <script src="../dist/t3.min.js"></script>
+    <script src="../demo.min.js"></script>
+    <style type="text/css">
+        .nav{
+            width: 100%;height: 18%;padding: 13px 0;border: #666666 solid 1px;border-bottom: 0px;border-right:0px;color: whitesmoke;
+        }
+        .nav p{
+            text-align:center;line-height:0px;
+        }
+        .nav span{
+            text-align:center;display:block;
+        }
+        .nav:hover{
+            background-color: #095f8a;
+            border-left: #36AF47 3px solid;
+            color: #209e20;
+            cursor: pointer;
+        }
+        .nav_active{
+            background-color: #095f8a;
+            border-left: #209e20 3px solid;
+            color: #36AF47;
+            cursor: pointer;
+        }
+    </style>
+    <script type="text/javascript">
+        var ec;
+        $(function () {
+            var myVar = setInterval(load,3000);
+            ec = new DemoMin;
+            ec.init();
+            // $(".nav").click(function(e){
+            //     $("*").removeClass('nav_active');    // 先删除所有元素的selected样式
+            //     var nodeName1 = e.target.nodeName;
+            //     if(nodeName1=="SPAN"||nodeName1=="P"){
+            //         $(e.target).parent().addClass('nav_active');
+            //     }else $(e.target).addClass('nav_active');  // 然后为被点击元素添加selected样式
+            // })
+
+        })
+        function load(){
+            $.ajax({
+                url:"/test/load",
+                dataType:"json",
+                async:false,
+                success:function(data) {
+                    timeData.push(data.time);
+                    powerData.push(data.power);
+                    carbonData.push(data.carbon);
+                    if(timeData.length>30){
+                        timeData.reverse();
+                        timeData.pop();
+                        timeData.reverse();
+                        powerData.reverse();
+                        powerData.pop();
+                        powerData.reverse();
+                        carbonData.reverse();
+                        carbonData.pop();
+                        carbonData.reverse();
+                    }
+                    $("#power").text(data.power);
+                    $("#carbon").text(data.carbon);
+                    ec.load();
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<!-- 链接触发器， href 属性为目标元素 ID -->
+<a href="#doc-oc-demo1" data-am-offcanvas="">点击显示侧边栏</a>
+<div id="doc-oc-demo1" class="am-offcanvas am-active" style="background: white">
+<!-- 侧边栏内容 -->
+    <div class="am-offcanvas-bar am-offcanvas-bar-overlay am-offcanvas-bar-active" style="background: #0c7cb5;width: 200px;box-shadow:  3px 0px 5px #B5B5B5;">
+        <div>
+            <div style="margin: 0 auto;width: 40%;position: relative;height: 0;padding-bottom: 40%;margin-top: 8px">
+                <img src="../img/header.png" style="border: #666666 solid 1px; border-radius: 50%;position:  absolute;top: 0;left: 0;width: 100%;height: 100%;"/>
+            </div>
+            <div>
+                <span style="display: block;text-align:center;color: whitesmoke">Mr.Wang</span>
+                <button type="button" class="am-btn am-btn-default am-round" style="background-color: transparent;display: block;margin: 0 auto;color: whitesmoke;padding: .2em 1em;margin-top: 4px;">默认样式</button>
+            </div>
+        </div>
+        <a href="/">
+            <div class="nav" style="position: absolute;bottom: 36%;">
+                <span class="am-icon-home am-icon-lg"></span>
+                <p>HOME</p>
+            </div>
+        </a>
+        <a href="/pv/data">
+            <div class="nav nav_active" style="position: absolute;bottom: 18%;">
+                <span class="am-icon-bar-chart am-icon-lg"></span>
+                <p>DASHBOARD</p>
+            </div>
+        </a>
+        <a href="/pv/interAction">
+        <div class="nav" style="position: absolute;bottom: 0;">
+            <span class="am-icon-random am-icon-lg"></span>
+            <p>INTERACTION</p>
+        </div>
+        </a>
+    </div>
+    <div style="float: left;height: 53px;margin-left: 200px;position: fixed;left: 0;right: 0;">
+        <img src="../img/atos-logo-menu-bar.png" width="170px" height="44px" style="margin-top: 8px;padding-left: 3%"/>
+        <span class="am-icon-gear am-icon-lg" style="text-align:center;display:block;float: right;"></span>
+    </div>
+    <div style="float: left;height: 600px;margin-left: 200px;background-color: #ECEFF4;position: fixed;bottom: 0;top: 53px;left: 0;right: 0;overflow: auto">
+        <div style="height:19%;width: 90%;left:5%;position:relative;top:1%;float: left;">
+            <div style="background-color: #36AF47;width: 20%;height: 100%;float: left">
+                <div style="margin: 0 auto;width: 50%;float: left;position: relative;left: 25%">
+                    <span style="display:block;font-size: 30px;font-weight: bold;margin-top: 30px;text-align: center;color: #E1F0E2">2.3</span>
+                </div>
+                <span style="float: left;margin:5px;color: #E1F0E2;margin-left: 25%">kWh</span>
+                <span  style="display: block;color: #E1F0E2;width: 100%;float: left;text-align: center">Current generation</span>
+            </div>
+            <div style="background-color: #48B558;width: 20%;height: 100%;float: left">
+                <div style="margin: 0 auto;width: 50%;float: left;position: relative;left: 25%">
+                    <span id="power" th:text="${#httpServletRequest.getAttribute('power')}" style="display:block;font-size: 30px;font-weight: bold;margin-top: 30px;text-align: center;color: #E1F0E2"></span>
+                </div>
+                <span style="float: left;margin:5px;color: #E1F0E2;margin-left: 25%">kWh</span>
+                <span  style="display: block;color: #E1F0E2;width: 100%;float: left;text-align: center">Current power generation</span>
+            </div>
+            <div style="background-color: #5ABC6A;width: 20%;height: 100%;float: left">
+                <div style="margin: 0 auto;width: 50%;float: left;position: relative;left: 25%">
+                    <span style="display:block;font-size: 30px;font-weight: bold;margin-top: 30px;text-align: center;color: #E1F0E2">740.8</span>
+                </div>
+                <span style="float: left;margin:5px;color: #E1F0E2;margin-left: 25%">kWh</span>
+                <span  style="display: block;color: #E1F0E2;width: 100%;float: left;text-align: center">Current generation</span>
+            </div>
+            <div style="background-color: #6CC27B;width: 20%;height: 100%;float: left">
+                <div style="margin: 0 auto;width: 50%;float: left;position: relative;left: 25%">
+                    <span style="display:block;font-size: 30px;font-weight: bold;margin-top: 30px;text-align: center;color: #E1F0E2">120</span>
+                </div>
+                <span style="float: left;margin:5px;color: #E1F0E2;margin-left: 25%">H</span>
+                <span  style="display: block;color: #E1F0E2;width: 100%;float: left;text-align: center">Total hours</span>
+            </div>
+            <div style="background-color: #7FC98C;width: 20%;height: 100%;float: left">
+                <div style="margin: 0 auto;width: 50%;float: left;position: relative;left: 25%">
+                    <span id="carbon" th:text="${#httpServletRequest.getAttribute('carbon')}" style="display:block;font-size: 30px;font-weight: bold;margin-top: 30px;text-align: center;color: #E1F0E2"></span>
+                </div>
+                <span style="float: left;margin:5px;color: #E1F0E2;margin-left: 25%">KG</span>
+                <span  style="display: block;color: #E1F0E2;width: 100%;float: left;text-align: center">Current generation</span>
+            </div>
+        </div>
+        <div style="height:15%;width: 90%;left:5%;position:relative;top:2%;float: left;background-color: #88A2B5;opacity: 0.7;">
+            <h4 style="color: white;margin-left: 3%;">WARNING</h4>
+            <ul style="list-style-type: none;">
+                <li style="float: left;width: 33%;">
+                    <span style="float: left;color: white;display: block;width: 25px;height: 25px;border-radius: 50%;padding-left:9px;background-color: #666666;">1</span>
+                    <span style="color:white;float: left;margin-left: 5px;">Emergncy Warning:</span>
+                    <span style="color: red;float: left;font-size: 24px;margin-top: -5px;margin-left: 5px">3</span>
+                </li>
+                <li style="float: left;width: 33%;">
+                    <span style="float: left;color: white;display: block;width: 25px;height: 25px;border-radius: 50%;padding-left:9px;background-color: #666666;">2</span>
+                    <span style="color:white;float: left;margin-left: 5px;">Important Warning:</span>
+                    <span style="color: orange;float: left;font-size: 24px;margin-top: -5px;margin-left: 5px">5</span>
+                </li>
+                <li style="float: left;width: 33%;">
+                    <span style="float: left;color: white;display: block;width: 25px;height: 25px;border-radius: 50%;padding-left:9px;background-color: #666666;">3</span>
+                    <span style="color:white;float: left;margin-left: 5px;">Gerenal Warning:</span>
+                    <span style="color: #927C00;float: left;font-size: 24px;margin-top: -5px;margin-left: 5px">2</span>
+                </li>
+            </ul>
+        </div>
+        <div style="height: 63%;width:90%;left:5%;position:relative;top:4%;float: left;background-color: white">
+            <div id="type-main-content" render="true" style="width: 100%"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
